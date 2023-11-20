@@ -103,6 +103,10 @@
   border: none;
   border-radius: 5px;
 }
+.searchArea button:hover {
+  cursor: pointer;
+  background-color: hsl(180, 66%, 65%);
+}
 
 /*-------------------Bottom-------------------------*/
 .bottom {
