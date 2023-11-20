@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import style from "./BodyContent.module.css";
 import record from "/images/icon-detailed-records.svg";
 import fullCustom from "/images/icon-fully-customizable.svg";
 import brandReco from "/images/icon-brand-recognition.svg";
 const BodyContent = () => {
+  const api_url = "https://cleanuri.com/api/v1/shorten";
+  // console.log("Checked");
+
+  const [inUrl, setInUrl] = useState("");
+  const [respData, setRespData] = useState([]);
+  const fetchDetails = async (val) => {
+    const response = await fetch(api_url);
+    const data = await response.json();
+    setRespData(...data);
+    console.log(respData, val);
+  };
+
+  const handleOnClick = () => {
+    fetchDetails(inUrl);
+  };
+  useEffect(() => {
+    console.log(respData, "hello");
+  }, [respData]);
   return (
     <div className={style.container}>
       <div className={style.wrapper}>
@@ -18,12 +36,23 @@ const BodyContent = () => {
           <button className={style.btn}>Get Started</button>
           <div className={style.searchArea}>
             <form action="">
-              <input type="url" placeholder="Shorten a link here..." required />
-              <button>Shorten It!</button>
+              <input
+                name="url"
+                id="url"
+                type="text"
+                placeholder="Shorten a link here..."
+                value={inUrl}
+                onChange={(e) => {
+                  setInUrl(e.target.value);
+                }}
+                required
+              />
+              <button onClick={handleOnClick}>Shorten It!</button>
             </form>
           </div>
         </div>
         <div className={style.bottom}>
+          <div className="response"></div>
           <div>
             <p className={style.title}>Advanced Statistics</p>
             <p>
@@ -43,7 +72,7 @@ const BodyContent = () => {
                 content.
               </p>
             </div>
-            <div style={{ top: "7em", left: "31em" }} className={style.feature}>
+            <div style={{ top: "7em", left: "33em" }} className={style.feature}>
               <div className={style.icon}>
                 <img src={fullCustom} alt="" />
               </div>
@@ -55,7 +84,7 @@ const BodyContent = () => {
               </p>
             </div>
             <div
-              style={{ top: "9em", left: "53.19em" }}
+              style={{ top: "9em", left: "57.2em" }}
               className={style.feature}
             >
               <div className={style.icon}>
@@ -69,7 +98,7 @@ const BodyContent = () => {
             </div>
             <div className={style.line}></div>
             <div
-              style={{ top: "15em", left: "51em" }}
+              style={{ top: "15em", left: "55em" }}
               className={style.line}
             ></div>
           </div>

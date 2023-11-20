@@ -69,11 +69,12 @@ p {
   /* margin-right: auto; */
 }
 .group {
-  width: 48em;
+  width: 38em;
   height: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 9.5em;
 }
 .common {
   display: flex;

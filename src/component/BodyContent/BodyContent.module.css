@@ -64,7 +64,7 @@
 }
 .searchArea {
   height: 6em;
-  width: 80em;
+  width: 71em;
   position: absolute;
   top: 33.5em;
   background-image: url("/images/bg-shorten-desktop.svg");
@@ -84,7 +84,7 @@
   /* flex-basis: 55em; */
 }
 .searchArea input {
-  width: 75em;
+  width: 67em;
   max-height: 3em;
   border: none;
   border-radius: 5px;
@@ -135,7 +135,7 @@
 }
 .feature {
   height: 15em;
-  width: 20em;
+  width: 22em;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -185,6 +185,6 @@
   position: absolute;
   width: 2.15em;
   height: 0.5em;
-  left: 28.84em;
+  left: 30.85em;
   background-color: hsl(180, 66%, 49%);
 }
