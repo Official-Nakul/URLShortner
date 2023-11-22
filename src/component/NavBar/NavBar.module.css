@@ -48,3 +48,30 @@
   color: black;
   cursor: pointer;
 }
+.login:hover {
+  color: black;
+}
+.right > img {
+  display: none;
+}
+@media (width<=400px) {
+  .container {
+    margin: 1em 0em 0em 0em;
+    width: 100vw;
+  }
+  .left {
+    width: 8em;
+  }
+  .left > p {
+    display: none;
+  }
+  .right > button {
+    display: none;
+  }
+  .right > img {
+    display: block;
+  }
+  .right {
+    padding: 0%;
+  }
+}

@@ -119,18 +119,20 @@
   background-color: hsl(257, 7%, 96%);
   color: hsl(255, 11%, 22%);
 }
-.bottom > div:nth-child(1) {
+.bottom > div:nth-child(2) {
   margin-top: 5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.bottom > div:nth-child(1) > p:nth-child(2) {
+.bottom > div:nth-child(2) > p:nth-child(2) {
   width: 33em;
   text-align: center;
   word-spacing: 1px;
   letter-spacing: 1px;
+  font-size: 14px;
+  color: hsl(0, 0%, 75%);
 }
 .title {
   font-size: 2.7rem;
