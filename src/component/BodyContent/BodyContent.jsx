@@ -4,15 +4,18 @@ import record from "/images/icon-detailed-records.svg";
 import fullCustom from "/images/icon-fully-customizable.svg";
 import brandReco from "/images/icon-brand-recognition.svg";
 const BodyContent = () => {
-  const api_url = "https://cleanuri.com/api/v1/shorten";
+  const [temp, setTemp] = useState(0);
+  const api_url = "https://tinyurl.com/api-create.php?url=";
   // console.log("Checked");
 
   const [inUrl, setInUrl] = useState("");
   const [respData, setRespData] = useState([]);
   const fetchDetails = async (val) => {
-    const response = await fetch(api_url);
+    const response = await fetch(
+      `https://tinyurl.com/api-create.php?url=${inUrl}`
+    );
     const data = await response.json();
-    setRespData(...data);
+    setRespData(data);
     console.log(respData, val);
   };
 

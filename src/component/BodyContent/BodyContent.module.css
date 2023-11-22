@@ -194,3 +194,17 @@
   left: 30.85em;
   background-color: hsl(180, 66%, 49%);
 }
+
+@media (width<=400px) {
+  .container {
+    width: 100vw;
+  }
+  .top {
+    width: 15em;
+    margin-left: 0em;
+    background-position: center center;
+  }
+  .head {
+    font-size: 2rem;
+  }
+}
